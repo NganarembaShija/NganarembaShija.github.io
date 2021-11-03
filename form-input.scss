@@ -1,0 +1,80 @@
+$bgcolor: lightblue;
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding:0;
+}
+
+.container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100vh;
+}
+
+.form-group{
+    position: relative;
+    width: 12rem;
+
+    .form-input{
+        position: absolute;
+        width: 100%;
+        background: none;
+        margin-top: 1.3rem;
+        padding: .5rem .5rem;
+        border: 1.5px solid #333;
+        border-radius: 7px;
+        outline: none;
+
+        
+    }
+    .form-label{
+        position: absolute;
+        margin-top: 1rem;
+        top: .5rem;
+        left: .8rem;
+        cursor: text;
+        transition: all .2s ease-in;
+        color: #333;
+        background-color: white;
+        padding: 0 .2rem;
+        padding: 3px;
+        border-radius: 5px;
+        
+    }
+
+    .form-input:focus ~ .form-label, .form-input:not(:focus).form-input:not(:placeholder-shown) ~ .form-label{
+        
+        top: -.4rem;
+    }
+
+    .form-input-bottom{
+        position: absolute;
+        background: none;
+        margin-top: 2rem;
+        padding: .2rem .5rem;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid black;
+        outline: none;
+    }
+    .form-label-bottom{
+        position: absolute;
+        margin-top: 1.5rem;
+        top: .4rem;
+        left: .8rem;
+        cursor: text;
+        transition: all .2s ease-in;
+    }
+    .form-input-bottom:focus ~ .form-label-bottom,.form-input-bottom:not(:placeholder-shown).form-input-bottom:not(:focus) ~ .form-label-bottom {
+        top: -0.8rem;
+        left: .4rem;
+    }
+}
